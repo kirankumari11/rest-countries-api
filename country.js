@@ -13,7 +13,7 @@ const currency = document.querySelector('.currency')
 
 
 fetch(
-    `http://localhost:3000/api/countries/name/${encodeURIComponent(countryName)}`
+    `https://api-backend-0gx1.onrender.com/api/countries/name/${encodeURIComponent(countryName)}`
 )
 .then((res)=>res.json())
 .then((data)=> {
