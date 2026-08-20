@@ -1,0 +1,112 @@
+body.dark {
+    --background-color: hsl(207, 26%, 17%);
+    --text-color: white;
+    --elements-color: hsl(209, 23%, 22%);
+}
+
+.countries-details-container {
+    max-width: 1200px;
+    margin-inline: auto;
+    margin-top: 24px;
+}
+
+main .back-btn {
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.2);
+    padding: 6px 24px;
+    border-radius: 4px;
+    background-color: var(--elements-color);
+}
+
+.country-details {
+    display: flex;
+    align-items: center;
+    gap: 64px;
+    margin-top: 64px;
+}
+
+.country-details img {
+    width: 35%;
+}
+
+.details-text {
+    display: flex;
+    flex-direction: column;
+    row-gap: 12px;
+    column-gap: 64px;
+    max-height: 170px;
+    flex-wrap: wrap;
+
+}
+
+.details-text p {
+    margin: 0;
+}
+
+.border-countries {
+    margin-top: 48px;
+}
+
+.border-countries a {
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.2);
+    padding: 4px 16px;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.border-countries-name {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.border-countries-name a {
+    background-color: var(--elements-color);
+}
+
+/****************************************** media queries *******************************/
+@media (max-width:1000px) {
+    .country-details {
+        display: flex;
+        align-items: center;
+        gap: 64px;
+        margin-top: 32px;
+    }
+    
+    .details-text {
+        max-height: unset;   
+    }
+
+    .border-countries {
+        margin-top: 32px;
+    }
+    .border-countries p b {
+        font-size: 15px;
+    }
+
+    .border-countries p a {
+        font-size: 12px;
+    }
+}
+
+/****************************************** for mobile screen ****************************************/
+
+@media (max-width:650px) {
+    .country-details {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 32px;
+        gap: 16px;
+    }
+
+    .country-details img {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .details-text {
+        max-height: unset;
+        /* font-size: 14px; */
+    }
+
+}
