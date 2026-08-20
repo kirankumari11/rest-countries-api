@@ -4,9 +4,8 @@ const searchInput = document.querySelector('.search-container input')
 
 let allCountriesData = []
 
-
 // Get all countries
-fetch('http://localhost:3000/api/countries')
+fetch('https://api-backend-0gx1.onrender.com/api/countries')
     .then((res) => res.json())
     .then((data) => {
         allCountriesData = data.data.objects
@@ -35,7 +34,7 @@ searchInput.addEventListener('input', (e) => {
 // Filter by region
 filterByRegion.addEventListener('change', () => {
 
-    fetch(`http://localhost:3000/api/countries/region/${filterByRegion.value}`)
+    fetch(`https://api-backend-0gx1.onrender.com/api/countries/region/${filterByRegion.value}`)
         .then((res) => res.json())
         .then((data) => {
             renderCountries(data.data.objects)
